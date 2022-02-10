@@ -34,8 +34,21 @@ function Post({ id, username, userImg, img, caption }) {
         <BookmarkIcon className="btn" />
       </div>
       {/* caption */}
+      <p className="truncate p-5">
+        <span className="mr-1 font-bold">{username}</span>
+        {caption}
+      </p>
       {/* comments */}
       {/* input box */}
+      <form className="flex items-center p-4">
+        <EmojiHappyIcon className="h-7" />
+        <input
+          type="text"
+          placeholder="Add a comment..."
+          className="flex-1 border-none outline-none focus:ring-0"
+        />
+        <button className="font-semibold text-blue-600">Post</button>
+      </form>
     </div>
   )
 }

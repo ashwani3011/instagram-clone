@@ -27,7 +27,7 @@ function Posts() {
           username={post.username}
           userImg={post.userImg}
           img={post.img}
-          caption={post.captions}
+          caption={post.caption}
         />
       ))}
     </div>

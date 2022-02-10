@@ -1,5 +1,5 @@
 function Story({ img, username }) {
-  console.log(img, username)
+  // console.log(img, username)
   return (
     <div>
       <img

@@ -6,7 +6,7 @@ function Feed() {
   return (
     <main className="mx-auto grid grid-cols-1  md:max-w-3xl md:grid-cols-2 lg:grid-cols-3 xl:max-w-6xl">
       {/* Section - left */}
-      <section className="md:col-span-2 ">
+      <section className="md:col-span-2 lg:col-span-2">
         {/* l - Stories */}
         <Stories />
         {/* l - Posts */}

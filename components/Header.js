@@ -10,15 +10,20 @@ import {
 } from '@heroicons/react/outline'
 import { HomeIcon } from '@heroicons/react/solid'
 import { signIn, signOut, useSession } from 'next-auth/react'
+import { useRouter } from 'next/router'
 
 function Header() {
   const { data: session } = useSession()
+  const router = useRouter()
   console.log(session)
   return (
     <div className="sticky top-0 z-10 border-b bg-white shadow-sm">
       <div className="mx-5 flex max-w-6xl justify-between lg:mx-auto">
         {/* Left - Logo*/}
-        <div className="relative hidden w-24 cursor-pointer lg:inline-grid">
+        <div
+          onClick={() => router.push('/')}
+          className="relative hidden w-24 cursor-pointer lg:inline-grid"
+        >
           <Image
             src="https://logos-world.net/wp-content/uploads/2020/04/Instagram-Logo.png"
             layout="fill"
@@ -28,6 +33,7 @@ function Header() {
         {/* logo for mobile */}
         <div className="relative w-10 flex-shrink-0 cursor-pointer lg:hidden">
           <Image
+            onClick={() => router.push('/')}
             src="https://cdn-icons-png.flaticon.com/512/87/87390.png"
             layout="fill"
             objectFit="contain"
@@ -51,7 +57,7 @@ function Header() {
 
         {/* Right - icons */}
         <div className="flex items-center justify-end space-x-4">
-          <HomeIcon className="navBtn" />
+          <HomeIcon onClick={() => router.push('/')} className="navBtn" />
           <MenuIcon className="h-6 cursor-pointer md:hidden" />
           {session ? (
             <>

@@ -6,6 +6,7 @@ module.exports = {
       'logos-world.net',
       'links.papareact.com',
       'cdn-icons-png.flaticon.com',
+      'cloudflare-ipfs.com',
     ],
   },
 }

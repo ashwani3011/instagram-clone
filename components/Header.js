@@ -70,7 +70,7 @@ function Header() {
                 </div>
               </div>
               <PlusCircleIcon
-                onClick={() => setOpen(!open)}
+                onClick={() => setOpen(true)}
                 className="navBtn"
               />
               <UserGroupIcon className="navBtn" />
